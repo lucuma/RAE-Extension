@@ -1,20 +1,8 @@
-var h;
+var h
 
 function composeURL(searchTerm) {
-	return 'rae.html';
+	//return 'rae.html';
 	return "http://lema.rae.es/drae/srv/search?val=" + searchTerm;
-}
-
-function extractInformation(html){
-	var html = $(html);
-	h.find(".f").text();
-	h.find(".q .a");
-	h.find(".q .d");
-	h.find(".q .b");
-	console.log(extractInformation);
-
-	//return {"term": "hola",
-	//				"definition": "saludo"}
 };
 
 $(document).ready(function() {
@@ -26,10 +14,18 @@ $(document).ready(function() {
 
 		$.get(url).done(function(data) {
 			var html = $(data);
-			console.log(data);
+			//word = extractInformation(html);
+			//console.log(data);
 			h = html;
-			word = extractInformation(data);
+			console.log(h[5])
+			$("section").html(h[5]);
 			//output.html(renderTemplate(word));
+
+			//console.log(html.find(".f").text())
 		});
 	});
 });
+
+// function extractInformation(html){
+// 	return html;
+// };
