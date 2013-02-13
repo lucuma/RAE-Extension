@@ -1,7 +1,7 @@
 var h
 
 function composeURL(searchTerm) {
-	//return 'rae.html';
+	return 'rae.html';
 	return "http://lema.rae.es/drae/srv/search?val=" + searchTerm;
 };
 
@@ -17,8 +17,8 @@ $(document).ready(function() {
 			//word = extractInformation(html);
 			//console.log(data);
 			h = html;
-			console.log(h[5])
-			$("section").html(h[5]);
+			//console.log(h.filter("div"));
+			$("section").html(h.filter("div"));
 			//output.html(renderTemplate(word));
 
 			//console.log(html.find(".f").text())
